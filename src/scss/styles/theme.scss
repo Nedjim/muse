@@ -1,0 +1,54 @@
+%cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+%band {
+    background: $opacityH;
+    color: $color1;
+}
+
+%textW {
+    color: $color1;
+}
+
+body {
+    font-family: $ff;
+    background-image: $background;
+    @extend %cover;
+}
+
+header,
+footer {
+    @extend %band;
+}
+
+a {
+    @extend %textW;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+h2 {
+    background: rgba(0, 0, 0, 0.5);
+    padding: $padding;
+    color: white;
+}
+
+#bio {
+    background: $opacity1;
+}
+
+#membres {
+    background: $opacity2;
+}
+
+#albums {
+    background: $opacity3;
+}
+
+#concerts {
+    background: $opacity4;
+}

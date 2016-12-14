@@ -1,0 +1,35 @@
+/*-----------------Effet 3D---------------*/
+
+.effect {
+    perspective: 1700px;
+    perspective-origin: 0 50%;
+}
+
+figure {
+    transform-style: preserve-3d;
+    img {
+        transition: transform 0.4s;
+    }
+}
+
+figure:hover img {
+    transform: translateX(25%);
+}
+
+figcaption {
+    position: absolute;
+    top: 14rem;
+    left: 3rem;
+    background: rgba(236, 239, 241, 0.9);
+    opacity: 0;
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    transform: rotateY(-90deg);
+    transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+figure:hover figcaption {
+    opacity: 1;
+    transform: rotateY(0deg);
+    transition: transform 0.4s, opacity 0.1s;
+}

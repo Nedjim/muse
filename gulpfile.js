@@ -6,21 +6,29 @@ const plumber = require('gulp-plumber');
 const reload = require('gulp-livereload');
 const sass = require('gulp-sass');
 const vendors = require('./vendors.js');
+//const image = require('gulp-image');
+const imagemin = require('gulp-imagemin');
 
 gulp.task('html', function() {
     gulp.src('src/*.html')
         .pipe(gulp.dest('build'));
 });
 
+// gulp.task('image', function() {
+//     gulp.src('src/img/*')
+//         .pipe(image())
+//         .pipe(gulp.dest('build/img'));
+// });
+
+gulp.task('imagemin', function() {
+    return gulp.src('src/img/*.jpg')
+        .pipe(imagemin({ progressive: true }))
+        .pipe(gulp.dest('build/img/'));
+});
+
 gulp.task('json', function() {
     gulp.src('src/json/*.json')
         .pipe(gulp.dest('build/json'));
-});
-
-gulp.task('custom-css', function() {
-    gulp.src('src/css/*.css')
-        .pipe(concat('custom.css'))
-        .pipe(gulp.dest('build/css'));
 });
 
 gulp.task('custom-js', function() {
@@ -42,12 +50,15 @@ gulp.task('vendor', function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src('src/scss/*.scss')
+    return gulp.src('src/scss/import.scss')
+        //un fichier de base avc import. que le fichier
+        // soit un tableau ordonné
         .pipe(sass.sync().on('error', sass.logError))
-        .pipe(gulp.dest('src/css'));
+        .pipe(concat('custom.css'))
+        .pipe(gulp.dest('build/css'));
 });
 
-gulp.task('build', ['custom-css', 'custom-js', 'html', 'sass', 'json']);
+gulp.task('build', ['custom-js', 'html', 'sass', 'json', 'imagemin']);
 gulp.task('build-all', ['build', 'vendor']);
 
 gulp.task('watch', ['build'], function() {

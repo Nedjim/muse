@@ -1,0 +1,59 @@
+.inline {
+    display: inline-block;
+}
+
+.float {
+    float: right;
+}
+
+.padding {
+    padding: $padding;
+}
+
+%box {
+    width: 100%;
+    height: 80vh;
+}
+
+%center {
+    text-align: center;
+}
+
+header {
+    @extend .padding;
+    z-index: index1;
+    position: fixed;
+    width: 100%;
+}
+
+li {
+    margin-right: $margin;
+    @extend .inline;
+}
+
+nav {
+    margin-top: $padding;
+    @extend .float;
+}
+
+.wrapper {
+    z-index: index2;
+    display: none;
+    padding-top: 6.1rem;
+    @extend %box;
+    h2 {
+        @extend %center;
+    }
+}
+
+#membres {
+    @extend %center;
+    .effect {
+        @extend .inline;
+        img {
+            width: $imgW;
+            height: $imgH;
+            margin: $margin;
+        }
+    }
+}

@@ -1,1 +1,50 @@
-$color1: #fafafa;
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
+/*-----------------FONT-------------------*/
+
+$ff: 'Nunito Sans',
+sans-serif;
+$background: url(../img/muse1.jpg);
+
+/*--------------FONT SIZE-----------------*/
+
+$sizeH1: 3.5rem;
+$sizeH2: 2rem;
+$sizeH3: 1rem;
+$imgW: 10rem;
+$imgH: 14rem;
+
+/*----------------COLORS------------------*/
+
+$color1: white;
+$color2: #212121;
+
+/*----------------OPACITY------------------*/
+
+$opacityH: rgba(33,
+33,
+33,
+0.8);
+$opacity1: rgba(117,
+117,
+117,
+0.5);
+$opacity2: rgba(85,
+139,
+47,
+0.5);
+$opacity3: rgba(239,
+108,
+0,
+0.5);
+$opacity4: rgba(198,
+40,
+40,
+0.5);
+
+/*-----------------POSITION----------------*/
+
+$padding: 1.3rem;
+$margin: 2rem;
+$index1: 10;
+$index2: 5;
