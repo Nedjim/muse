@@ -1,0 +1,41 @@
+@mixin rotate($val) {
+    transform: rotate($val);
+}
+
+// @mixin transition_effect($transition, $property, $duration, $timing, $delay) {
+//     @include transition($transition);
+//     @include transition_property($property);
+//     @include transition_duration($duration);
+//     @include transition_timing($timing);
+//     @include transition-delay($delay);
+// }
+// @mixin transition($val) {
+//     -moz-transition: $val;
+//     -o-transition: $val;
+//     -webkit-transition: $val;
+//     transition: $val;
+// }
+// @mixin transition_property ($val) {
+//     -moz-transition-property: $val;
+//     -o-transition-property: $val;
+//     -webkit-transition-property: $val;
+//     transition-property: $val;
+// }
+// @mixin transition_duration($val) {
+//     -moz-transition-property: $val;
+//     -o-transition-property: $val;
+//     -webkit-transition-property: $val;
+//     transition-property: $val;
+// }
+// @mixin transition_timing($val) {
+//     -moz-transition-timing-function: $val;
+//     -o-transition-timing-function: $val;
+//     -webkit-transition-timing-function: $val;
+//     transition-timing-function: $val;
+// }
+// @mixin transition_delay($val) {
+//     -moz-transition-delay: $val;
+//     -o-transition-delay: $val;
+//     -webkit-transition-delay: $val;
+//     transition-delay: $val;
+// }

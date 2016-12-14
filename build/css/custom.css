@@ -151,6 +151,18 @@ li {
 a {
   text-decoration: none; }
 
+/*-----------------EXTENDS----------------*/
+.wrapper {
+  width: 100%;
+  height: 80vh; }
+
+.wrapper h2, #membres {
+  text-align: center; }
+
+#membres .effect, #membres .effect img {
+  margin: 2rem; }
+
+/*----------------POSITIONS----------------*/
 .inline, li, #membres .effect {
   display: inline-block; }
 
@@ -160,13 +172,7 @@ a {
 .padding, header {
   padding: 1.3rem; }
 
-.wrapper {
-  width: 100%;
-  height: 80vh; }
-
-.wrapper h2, #membres {
-  text-align: center; }
-
+/*----------------STYLES----------------*/
 header {
   z-index: index1;
   position: fixed;
@@ -185,8 +191,7 @@ nav {
 
 #membres .effect img {
   width: 10rem;
-  height: 14rem;
-  margin: 2rem; }
+  height: 14rem; }
 
 body {
   background-size: cover;
@@ -240,13 +245,13 @@ figure:hover img {
 figcaption {
   position: absolute;
   top: 14rem;
-  left: 3rem;
+  left: -1rem;
   background: rgba(236, 239, 241, 0.9);
   opacity: 0;
   backface-visibility: hidden;
   transform-origin: 0 0;
-  transform: rotateY(-90deg);
-  transition: transform 0.4s, opacity 0.1s 0.3s; }
+  transition: transform 0.5s, opacity 0.1s 0.3s;
+  transform: rotate(-60deg); }
 
 figure:hover figcaption {
   opacity: 1;

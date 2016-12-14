@@ -19,13 +19,13 @@ figure:hover img {
 figcaption {
     position: absolute;
     top: 14rem;
-    left: 3rem;
-    background: rgba(236, 239, 241, 0.9);
+    left: -1rem;
+    background: $opacity5;
     opacity: 0;
     backface-visibility: hidden;
     transform-origin: 0 0;
-    transform: rotateY(-90deg);
-    transition: transform 0.4s, opacity 0.1s 0.3s;
+    transition: transform 0.5s, opacity 0.1s 0.3s;
+    @include rotate(-60deg);
 }
 
 figure:hover figcaption {
